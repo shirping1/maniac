@@ -21,14 +21,14 @@ public class Enemy : Controller
 
     public override void Attack()
     {
-        base.Attack();
+
     }
 
     public override void GetDamage(int damage)
     {
         base.GetDamage(damage);
         nowHP -= damage;
-        if(nowHP <= 0 )
+        if (nowHP <= 0)
         {
             DropItem();
         }

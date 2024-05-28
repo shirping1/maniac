@@ -7,4 +7,9 @@ public class Weapon : MonoBehaviour
     public int damage;
     public float reloadTime;
 
+    virtual public void UseWeapon()
+    {
+
+    }
+
 }

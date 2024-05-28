@@ -13,11 +13,20 @@ public class Player : Controller
         nowHP = maxHP;
     }
 
-    // Update is called once per frame
     void Update()
     {
         mousePos.position = Input.mousePosition;
         Move();
+        if (Input.GetMouseButton(0))
+        {
+            Attack();
+        }
+        else if (Input.GetMouseButton(1))
+        {
+            Attack();
+        }
+
+        Debug.DrawLine(transform.position, transform.position + transform.forward * 3, Color.blue);
     }
 
     private void Move()
@@ -25,9 +34,8 @@ public class Player : Controller
         transform.Translate(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
     }
 
-    public override void Attack()
+    public override void Attack() //
     {
-        base.Attack();
         //Instantiate(bullet, shootPos);
     }
 
